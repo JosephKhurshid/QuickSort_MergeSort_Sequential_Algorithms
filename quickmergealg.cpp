@@ -189,7 +189,7 @@ int main(int argc, char* argv[]) {
         }
     }
     //If the user does not have -i, -o or --alg, then I return 1. Crucially, if the call has those but doesn't put a input or output file name, 
-    //then I error out on not being able to open the file. For example ./mysort -i -o outputFile.txt --alg=merge will pass verify_arguments but
+    //then I error out on not being able to open the file. For example ./quickmergealg -i -o outputFile.txt --alg=merge will pass verify_arguments but
     //when it goes to populateArray, the filename being opened, to read, will be -o b/c it is the one after -i. This will then error b/c there should be no
     //file named -o in the user directory. Since this would clearly be a mistake on the user part. 
     if (verifyArguments(argc, argv) == 1) return 1;
